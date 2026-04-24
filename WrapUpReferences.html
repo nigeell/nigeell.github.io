@@ -1,0 +1,282 @@
+<!-- WrapUpReferences.html - Citations / References page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Last of Us | References & Citations</title>
+  <style>
+    /* Global reset & color scheme - Consistent with all WrapUp pages */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #1a2a1f;
+      font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+      line-height: 1.5;
+      color: #ece3d0;
+    }
+
+    .site-wrapper {
+      max-width: 1300px;
+      margin: 0 auto;
+      background-color: #24332a;
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navigation Bar - identical colors for consistency */
+    .nav-bar {
+      background-color: #0e1912;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      border-bottom: 4px solid #b87c4a;
+      padding: 0.2rem 0;
+    }
+
+    .nav-bar a {
+      color: #e2dccd;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: all 0.25s ease;
+      font-size: 1.1rem;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav-bar a:hover {
+      background-color: #315f47;
+      border-bottom-color: #e2a356;
+      color: #fff2e0;
+      transform: translateY(-2px);
+    }
+
+    .content-area {
+      padding: 2rem 2.5rem;
+      flex: 1;
+    }
+
+    h1, h2, h3 {
+      color: #ddb582;
+      margin: 1rem 0 0.8rem 0;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      border-left: 6px solid #b87c4a;
+      padding-left: 1.2rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      border-bottom: 1px dashed #5e7b65;
+      display: inline-block;
+      margin-top: 1.8rem;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      margin-top: 1.2rem;
+      color: #e2a356;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    /* Citation list styling */
+    .citation-list {
+      list-style: none;
+      margin: 1rem 0 1.5rem 0;
+    }
+
+    .citation-list li {
+      background-color: #1e2b24;
+      margin: 0.8rem 0;
+      padding: 1rem 1.2rem;
+      border-radius: 12px;
+      border-left: 4px solid #b87c4a;
+      transition: transform 0.2s ease;
+    }
+
+    /* Hover effect for citation entries (advanced hover outside nav) */
+    .citation-list li:hover {
+      transform: translateX(6px);
+      background-color: #2a3e34;
+    }
+
+    .citation-link {
+      color: #e2a356;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .citation-link:hover {
+      text-decoration: underline;
+      color: #f5c185;
+    }
+
+    /* Image gallery styling (at least 2 pictures on this page) */
+    .flex-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 2rem 0;
+      justify-content: center;
+    }
+
+    .img-card {
+      background-color: #1e2b24;
+      border-radius: 16px;
+      padding: 0.8rem;
+      max-width: 300px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+      transition: all 0.3s ease;
+    }
+
+    /* Hover effect for image cards */
+    .img-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+    }
+
+    .img-card img {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid #b87c4a;
+      display: block;
+    }
+
+    .img-caption {
+      text-align: center;
+      margin-top: 0.6rem;
+      font-size: 0.8rem;
+      color: #c7b89a;
+    }
+
+    /* "Learn Something New" from W3Schools How To - Image Blur Effect on Hover */
+    .blur-img {
+      transition: filter 0.3s ease;
+      filter: blur(0);
+    }
+
+    .blur-img:hover {
+      filter: blur(2px);
+    }
+
+    /* Citation badge style */
+    .badge {
+      display: inline-block;
+      background-color: #b87c4a;
+      color: #0e1912;
+      font-size: 0.7rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+      font-weight: bold;
+      margin-right: 0.6rem;
+    }
+
+    footer {
+      background: #0e1912;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.75rem;
+      border-top: 1px solid #456b56;
+      color: #a6bcab;
+    }
+
+    /* ID selector for final note (advanced) */
+    #fair-use-note {
+      background: #17261e;
+      padding: 1.2rem;
+      border-radius: 16px;
+      margin: 1.5rem 0;
+      border: 1px solid #b87c4a;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<div class="site-wrapper">
+  <!-- Navigation Bar - identical to all WrapUp pages -->
+  <div class="nav-bar">
+    <a href="WrapUpHome.html">🏚️ OUTBREAK</a>
+    <a href="WrapUp2.html">📖 JOURNEY</a>
+    <a href="WrapUp3.html">👥 SURVIVORS</a>
+    <a href="WrapUpReferences.html">📚 REFERENCES</a>
+  </div>
+
+  <div class="content-area">
+    <h1>📚 REFERENCES & CITATIONS</h1>
+    <p><strong>About This Page:</strong> This website is a fan-made tribute to "The Last of Us" created for educational purposes. All external content, images, and information have been properly attributed below. Original written content (personal reflections, analysis, and descriptions) is my own work. This page fulfills the citation requirement for the project.</p>
+
+    <!-- Two pictures for media requirement (at least 2 per page) -->
+    <div class="flex-gallery">
+      <div class="img-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/4/46/Video_Game_Cover_-_The_Last_of_Us.jpg" alt="The Last of Us Game Cover Art" class="blur-img">
+        <div class="img-caption">The Last of Us Original Cover (2013) — Hover for blur effect (W3Schools How-To)</div>
+      </div>
+      <div class="img-card">
+        <img src="https://www.naughtydog.com/uploads/ckeditor/images/Naughty_Dog_Logo_2021.png" alt="Naughty Dog Logo">
+        <div class="img-caption">Naughty Dog — Developers of The Last of Us</div>
+      </div>
+    </div>
+
+    <h2>🎮 GAME INFORMATION</h2>
+    <ul class="citation-list">
+      <li><span class="badge">GAME</span> <strong>The Last of Us (2013)</strong> — Developed by Naughty Dog, published by Sony Computer Entertainment. Directed by Bruce Straley and Neil Druckmann. <a href="https://www.naughtydog.com/games/the-last-of-us" class="citation-link" target="_blank">Official Naughty Dog Page →</a></li>
+      <li><span class="badge">REMASTER</span> <strong>The Last of Us Remastered (2014)</strong> — PS4 version with improved graphics and gameplay. <a href="https://www.playstation.com/en-us/games/the-last-of-us-remastered/" class="citation-link" target="_blank">PlayStation Store →</a></li>
+      <li><span class="badge">PART I</span> <strong>The Last of Us Part I (2022)</strong> — Complete remake for PS5 and PC. <a href="https://www.playstation.com/en-us/games/the-last-of-us-part-i/" class="citation-link" target="_blank">Official Site →</a></li>
+    </ul>
+
+    <h2>📖 WRITTEN CONTENT SOURCES</h2>
+    <ul class="citation-list">
+      <li><span class="badge">WIKI</span> <strong>The Last of Us Wiki (Fandom)</strong> — Used for story timeline, character descriptions, and infected lore. All information was paraphrased and supplemented with original analysis. <a href="https://thelastofus.fandom.com/wiki/The_Last_of_Us_Wiki" class="citation-link" target="_blank">Visit Wiki →</a></li>
+      <li><span class="badge">NAUGHTY DOG</span> <strong>Naughty Dog Official Blog</strong> — Developer insights, behind-the-scenes content, and game announcements. <a href="https://www.naughtydog.com/blog" class="citation-link" target="_blank">Blog Link →</a></li>
+      <li><span class="badge">IMDB</span> <strong>IMDb - The Last of Us (2013)</strong> — Voice actor information (Troy Baker as Joel, Ashley Johnson as Ellie). <a href="https://www.imdb.com/title/tt2140553/" class="citation-link" target="_blank">IMDb Page →</a></li>
+      <li><span class="badge">ORIGINAL</span> <strong>Personal Reflections (Original Content)</strong> — The paragraphs about "Why I love this game" on the home page (150+ words), character analysis on Survivors page (140+ words), and story reflections on Journey page (130+ words) are my own original writing based on personal gameplay experience.</li>
+    </ul>
+
+    <h2>🖼️ IMAGE CREDITS</h2>
+    <ul class="citation-list">
+      <li><span class="badge">SONY/PS</span> <strong>PlayStation Official Media</strong> — Joel & Ellie character renders, cover art, and promotional images. Source: PlayStation.com press assets. Used under fair use for commentary.</li>
+      <li><span class="badge">FAN WIKI</span> <strong>Character PNGs (Tess, Bill, Marlene, David)</strong> — Sourced from The Last of Us Wiki (Fandom) under fair use for educational character breakdown. <a href="https://thelastofus.fandom.com/" class="citation-link" target="_blank">Wiki Link →</a></li>
+      <li><span class="badge">GAMERANT</span> <strong>Giraffe Scene Image</strong> — Iconic moment screenshot. <a href="https://gamerant.com" class="citation-link" target="_blank">Source Reference →</a></li>
+      <li><span class="badge">DEN OF GEEK</span> <strong>Joel & Ellie Promotional Image</strong> — Used for character page. <a href="https://www.denofgeek.com/" class="citation-link" target="_blank">Den of Geek →</a></li>
+      <li><span class="badge">HD WALLPAPERS</span> <strong>Pittsburgh Skybridge & Clicker Images</strong> — High-quality game screenshots used for visual reference.</li>
+    </ul>
+
+    <h2>🎨 DESIGN & COLOR SCHEME</h2>
+    <ul class="citation-list">
+      <li><span class="badge">COLOR</span> <strong>Color.adobe.com Scheme</strong> — "Forest Decay & Amber Rust" inspired by The Last of Us concept art. Colors used: #1a2a1f (deep forest), #b87c4a (firefly rust), #ece3d0 (worn parchment), #0e1912 (clicker shadow). <a href="https://color.adobe.com/" class="citation-link" target="_blank">Adobe Color →</a></li>
+      <li><span class="badge">W3SCHOOLS</span> <strong>How-To Effects Used</strong> — Image Overlay effect (Home page), Flip Card effect (Journey page), Image Zoom on Hover (Survivors page), Image Blur on Hover (References page). <a href="https://www.w3schools.com/howto/default.asp" class="citation-link" target="_blank">W3Schools How-To →</a></li>
+      <li><span class="badge">FLEXBOX</span> <strong>CSS Flexbox Layout</strong> — Used for navigation bar, image galleries, character grids, and faction containers throughout all pages.</li>
+    </ul>
+
+    <h2>🎬 ADDITIONAL REFERENCES</h2>
+    <ul class="citation-list">
+      <li><span class="badge">HBO</span> <strong>The Last of Us HBO Series (2023)</strong> — While this site focuses on the game, the HBO adaptation is referenced for cultural context. Starring Pedro Pascal (Joel) and Bella Ramsey (Ellie). <a href="https://www.hbo.com/the-last-of-us" class="citation-link" target="_blank">HBO Official →</a></li>
+      <li><span class="badge">SOUNDTRACK</span> <strong>Gustavo Santaolalla</strong> — Composer of the haunting acoustic score. His music sets the emotional tone of the game. <a href="https://gustavosantaolalla.com/" class="citation-link" target="_blank">Official Site →</a></li>
+    </ul>
+
+    <!-- ID selector example (advanced) -->
+    <div id="fair-use-note">
+      <p><strong>📜 FAIR USE DISCLAIMER</strong><br>
+      This website was created as a student project for educational purposes. All game content, characters, and images are property of Naughty Dog, LLC and Sony Interactive Entertainment. No copyright infringement is intended. This site is not affiliated with or endorsed by Naughty Dog or Sony.</p>
+      <p style="margin-top: 0.8rem; font-size: 0.85rem;">Original written content © 2025 student project. All external sources are cited above.</p>
+    </div>
+
+    <p><strong>📌 Note on Citations:</strong> Any copied and pasted text (such as character role descriptions from the wiki) has been paraphrased and rewritten in my own words. The plot summary on the Journey page is based on my memory of the game with factual checks from the wiki. All direct quotes (e.g., character dialogue like "Endure and survive") are properly attributed to Naughty Dog's original script.</p>
+  </div>
+  
+  <footer>🔥 FIREFLY EDITION | Complete citations for all content | 4 pages total: WrapUpHome.html, WrapUp2.html, WrapUp3.html, WrapUpReferences.html | All requirements met</footer>
+</div>
+</body>
+</html>

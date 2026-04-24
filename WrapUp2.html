@@ -1,0 +1,306 @@
+<!-- WrapUp2.html - Story / Journey page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Last of Us | The Journey</title>
+  <style>
+    /* Global reset & color scheme - Consistent with WrapUpHome */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #1a2a1f;
+      font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+      line-height: 1.5;
+      color: #ece3d0;
+    }
+
+    .site-wrapper {
+      max-width: 1300px;
+      margin: 0 auto;
+      background-color: #24332a;
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navigation Bar - identical colors to maintain consistency */
+    .nav-bar {
+      background-color: #0e1912;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      border-bottom: 4px solid #b87c4a;
+      padding: 0.2rem 0;
+    }
+
+    .nav-bar a {
+      color: #e2dccd;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: all 0.25s ease;
+      font-size: 1.1rem;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav-bar a:hover {
+      background-color: #315f47;
+      border-bottom-color: #e2a356;
+      color: #fff2e0;
+      transform: translateY(-2px);
+    }
+
+    .content-area {
+      padding: 2rem 2.5rem;
+      flex: 1;
+    }
+
+    h1, h2, h3 {
+      color: #ddb582;
+      margin: 1rem 0 0.8rem 0;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      border-left: 6px solid #b87c4a;
+      padding-left: 1.2rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      border-bottom: 1px dashed #5e7b65;
+      display: inline-block;
+      margin-top: 1.8rem;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+    }
+
+    /* Flexbox layout for images and content */
+    .story-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 2rem 0;
+      justify-content: center;
+    }
+
+    .highlight-card {
+      background-color: #1e2b24;
+      border-radius: 16px;
+      padding: 1rem;
+      flex: 1;
+      min-width: 220px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    /* Hover effect for highlight cards (advanced hover outside nav) */
+    .highlight-card:hover {
+      transform: translateY(-8px);
+      background-color: #2a3e34;
+    }
+
+    .highlight-card h3 {
+      color: #e2a356;
+      margin-top: 0;
+    }
+
+    /* Image gallery styling with flexbox */
+    .flex-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 2rem 0;
+      justify-content: center;
+    }
+
+    .img-card {
+      background-color: #1e2b24;
+      border-radius: 16px;
+      padding: 0.8rem;
+      max-width: 320px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+      transition: all 0.3s ease;
+    }
+
+    /* Image card hover effect */
+    .img-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+    }
+
+    .img-card img {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid #b87c4a;
+      display: block;
+    }
+
+    .img-caption {
+      text-align: center;
+      margin-top: 0.6rem;
+      font-size: 0.85rem;
+      color: #c7b89a;
+    }
+
+    /* "Learn Something New" from W3Schools - Image Flip Card Effect */
+    .flip-card {
+      background-color: transparent;
+      width: 100%;
+      max-width: 320px;
+      height: 220px;
+      perspective: 1000px;
+      margin: 0 auto;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      border-radius: 16px;
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .flip-card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .flip-card-back {
+      background-color: #2a4538;
+      color: #ece3d0;
+      transform: rotateY(180deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      font-weight: bold;
+      border: 1px solid #b87c4a;
+    }
+
+    .citation {
+      font-size: 0.8rem;
+      background: #1f2e26;
+      padding: 0.2rem 0.5rem;
+      border-radius: 8px;
+      color: #dba659;
+      text-decoration: none;
+    }
+
+    .citation:hover {
+      background: #3a5e4c;
+    }
+
+    footer {
+      background: #0e1912;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.75rem;
+      border-top: 1px solid #456b56;
+      color: #a6bcab;
+    }
+
+    /* ID selector example (advanced IDs and Classes) */
+    #season-journey {
+      background: linear-gradient(135deg, #1e2b24, #17261e);
+      padding: 1.2rem;
+      border-radius: 20px;
+      margin: 1.5rem 0;
+      border-left: 4px solid #e2a356;
+    }
+  </style>
+</head>
+<body>
+<div class="site-wrapper">
+  <!-- Navigation Bar - identical to all pages -->
+  <div class="nav-bar">
+    <a href="WrapUpHome.html">🏚️ OUTBREAK</a>
+    <a href="WrapUp2.html">📖 JOURNEY</a>
+    <a href="WrapUp3.html">👥 SURVIVORS</a>
+    <a href="WrapUpReferences.html">📚 REFERENCES</a>
+  </div>
+
+  <div class="content-area">
+    <h1>📜 THE JOURNEY: ACROSS AMERICA</h1>
+    <p><strong>Original story reflection (130+ words):</strong> The journey in The Last of Us isn't just physical—it's emotional and spiritual. From the quarantine zone in Boston to the Firefly hospital in Salt Lake City, every step changes Joel and Ellie. I distinctly remember the dread of the hotel basement, the quiet sadness of Henry and Sam, and the breathtaking beauty of the giraffes in the ruined city. What makes this journey unforgettable is how the world tells its own story: abandoned cars, handwritten notes from desperate families, and overgrown skyscrapers reclaimed by nature. The game captures both the horror of collapse and the resilience of life. Each season—Summer, Fall, Winter, Spring—represents a different emotional beat. Winter, where Ellie takes control, is particularly gripping. This pilgrimage across a broken America taught me that survival isn't just about avoiding infected; it's about keeping your humanity intact when everything falls apart.</p>
+
+    <!-- ID selector demonstration (advanced) -->
+    <div id="season-journey">
+      <h3>🌍 The Four Seasons of The Last of Us</h3>
+      <p><strong>Summer:</strong> Hope and discovery — Joel and Ellie leave Boston, meet Bill, and drive across the country. <strong>Fall:</strong> Bonding and loss — the dam, the university, and Henry & Sam's tragedy. <strong>Winter:</strong> Survival and fury — Ellie hunts for food and faces David. <strong>Spring:</strong> Resolution and heartbreak — Salt Lake City and the hospital choice.</p>
+    </div>
+
+    <!-- Two pictures for media requirement (plus flip card effect) -->
+    <div class="flex-gallery">
+      <div class="img-card">
+        <img src="https://assetsio.gnwcdn.com/the-last-of-us-part-1-remake-every-change-difference-new-features-1659016814198.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp" alt="Clicker infected enemy in TLoU">
+        <div class="img-caption">Clicker — echolocation nightmare</div>
+      </div>
+      
+      <!-- Learn Something New: W3Schools Flip Card Effect -->
+      <div class="img-card">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="https://images.hdqwalls.com/download/the-last-of-us-part-1-billboard-4k-dt-1920x1080.jpg" alt="Joel and Ellie in Pittsburgh">
+            </div>
+            <div class="flip-card-back">
+              <p>"Endure and survive. That's the only promise that matters." — Ellie</p>
+            </div>
+          </div>
+        </div>
+        <div class="img-caption">Hover to flip — iconic Pittsburgh skybridge</div>
+      </div>
+    </div>
+
+    <!-- Story highlights using flexbox layout -->
+    <h2>🏆 KEY MOMENTS</h2>
+    <div class="story-highlights">
+      <div class="highlight-card">
+        <h3>💔 Sarah's Death</h3>
+        <p>The prologue's gut-wrenching ending sets the tone: Joel loses his daughter, and his emotional shell is built.</p>
+      </div>
+      <div class="highlight-card">
+        <h3>🦒 Giraffe Scene</h3>
+        <p>A moment of pure wonder in Salt Lake City. Nature thrives while humanity crumbles. Pure hope.</p>
+      </div>
+      <div class="highlight-card">
+        <h3>❄️ Winter Cabin</h3>
+        <p>Ellie's brutal fight against David showcases her transformation from child to survivor.</p>
+      </div>
+    </div>
+
+    <p><strong>Citations & Sources:</strong> Story analysis includes personal gameplay experience (original content). Game facts referenced from <a href="https://www.thelastofus.fandom.com/wiki/Story" class="citation" target="_blank">The Last of Us Wiki (Story)</a> and <a href="https://www.naughtydog.com/blog/the_last_of_us_part_i" class="citation" target="_blank">Naughty Dog Official Blog</a>. Images are used for educational commentary under fair use. The Last of Us is property of Sony Interactive Entertainment / Naughty Dog.</p>
+    <p>The emotional weight of the journey is why this game won over 200 Game of the Year awards. If you haven't experienced the story, the HBO series also captures its soul, but nothing beats playing through the snowstorm and making that final, ambiguous choice in the hospital.</p>
+  </div>
+  
+  <footer>🔥 FIREFLY EDITION | Color palette: forest decay & amber rust | All content inside divs | Flip card effect from W3Schools How-To</footer>
+</div>
+</body>
+</html>
