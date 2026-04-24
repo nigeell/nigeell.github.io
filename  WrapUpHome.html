@@ -1,0 +1,221 @@
+<!-- WrapUpHome.html - Main landing page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Last of Us | Outbreak Day</title>
+  <style>
+    /* Global reset & color scheme (inspired by TLoU - earthy greens, rust, worn leather) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #1a2a1f;  /* deep forest shadow */
+      font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+      line-height: 1.5;
+      color: #ece3d0;  /* aged parchment */
+    }
+
+    /* main container with flexbox layout technique (advanced layout) */
+    .site-wrapper {
+      max-width: 1300px;
+      margin: 0 auto;
+      background-color: #24332a;
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navigation Bar - custom colors, professional style */
+    .nav-bar {
+      background-color: #0e1912;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      border-bottom: 4px solid #b87c4a; /* rusty firefly accent */
+      padding: 0.2rem 0;
+    }
+
+    .nav-bar a {
+      color: #e2dccd;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: all 0.25s ease;
+      font-size: 1.1rem;
+      border-bottom: 2px solid transparent;
+    }
+
+    /* HOVER EFFECT for nav (separate from default hover, advanced) */
+    .nav-bar a:hover {
+      background-color: #315f47;
+      border-bottom-color: #e2a356;
+      color: #fff2e0;
+      transform: translateY(-2px);
+    }
+
+    /* main content divs */
+    .content-area {
+      padding: 2rem 2.5rem;
+      flex: 1;
+    }
+
+    h1, h2, h3 {
+      color: #ddb582;
+      margin: 1rem 0 0.8rem 0;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      border-left: 6px solid #b87c4a;
+      padding-left: 1.2rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      border-bottom: 1px dashed #5e7b65;
+      display: inline-block;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+    }
+
+    /* Image gallery using FLEXBOX layout technique */
+    .flex-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 2rem 0;
+      justify-content: center;
+    }
+
+    .img-card {
+      background-color: #1e2b24;
+      border-radius: 16px;
+      padding: 0.8rem;
+      max-width: 300px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* HOVER EFFECT: image card lift (advanced hover outside nav) */
+    .img-card:hover {
+      transform: scale(1.02) translateY(-6px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+    }
+
+    .img-card img {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid #b87c4a;
+      display: block;
+    }
+
+    .img-caption {
+      text-align: center;
+      margin-top: 0.6rem;
+      font-size: 0.85rem;
+      color: #c7b89a;
+    }
+
+    /* "Learn Something New" from W3Schools How To - Image Overlay Effect */
+    .overlay-container {
+      position: relative;
+      width: 100%;
+      max-width: 280px;
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .overlay-container img {
+      width: 100%;
+      display: block;
+      transition: 0.3s ease;
+    }
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(11, 22, 18, 0.85);
+      overflow: hidden;
+      width: 100%;
+      height: 0;
+      transition: 0.4s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .overlay-container:hover .overlay {
+      height: 100%;
+    }
+    .overlay-text {
+      color: #f2d9b3;
+      font-weight: bold;
+      padding: 1rem;
+    }
+
+    .citation {
+      font-size: 0.8rem;
+      background: #1f2e26;
+      padding: 0.2rem 0.5rem;
+      border-radius: 8px;
+      color: #dba659;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #0e1912;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.75rem;
+      border-top: 1px solid #456b56;
+      color: #a6bcab;
+    }
+  </style>
+</head>
+<body>
+<div class="site-wrapper">
+  <!-- navigation bar (all pages linked) -->
+  <div class="nav-bar">
+    <a href="WrapUpHome.html">🏚️ OUTBREAK</a>
+    <a href="WrapUp2.html">📖 JOURNEY</a>
+    <a href="WrapUp3.html">👥 SURVIVORS</a>
+    <a href="WrapUpReferences.html">📚 REFERENCES</a>
+  </div>
+
+  <div class="content-area">
+    <h1>THE LAST OF US: A BROKEN WORLD</h1>
+    <p><strong>Why this game resonates with me — original reflection (150+ words):</strong> The Last of Us isn't just about zombies or fungus; it's about the fragile beauty of human connection. I remember the first time I witnessed Joel hold Ellie's hand after escaping the capitol building — no words, but everything was said. This game taught me that hope can exist even in damp, crumbling ruins. The chemistry between characters, the moral complexity, and the haunting soundtrack by Gustavo Santaolalla feel like a melancholic embrace. I love how every abandoned house tells a silent story: a child's drawing, a suicide note, a birthday banner. It makes you reflect on what you'd sacrifice for those you love. The world is harsh, but the moments of levity — Ellie's terrible puns, the giraffe scene — shine like fireflies in the dark. That's why I built this tribute: to honor Naughty Dog's masterpiece and share the emotional weight that lingers long after the credits roll.</p>
+    
+    <!-- two pictures for homepage (media requirement) -->
+    <div class="flex-gallery">
+      <div class="img-card">
+        <img src="https://image.api.playstation.com/vulcan/ap/rnd/202206/0220/7GwujF4E9syBIvX72wZbYVrK.jpg?w=440" alt="Joel and Ellie in overgrown Boston">
+        <div class="img-caption">Joel & Ellie — The start of everything</div>
+      </div>
+      <div class="img-card">
+        <div class="overlay-container">
+          <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2021/07/The-Last-of-Us-Giraffe-Scene.jpg" alt="Ellie watching giraffe">
+          <div class="overlay">
+            <div class="overlay-text">✨ "Endure and Survive" ✨</div>
+          </div>
+        </div>
+        <div class="img-caption">Iconic giraffe moment — hope remains</div>
+      </div>
+    </div>
+    <p>🎮 Immerse yourself in the post-pandemic epic. <a href="https://www.playstation.com/en-us/games/the-last-of-us/" class="citation" target="_blank">Official PlayStation Page</a> | <a href="https://www.naughtydog.com/blog/the_last_of_us_part_i" class="citation" target="_blank">Naughty Dog Dev Blog</a></p>
+    <p><em>“When you're lost in the darkness, look for the light.”</em> This page contains original content and commentary. Every image is used for educational/fan analysis.</p>
+  </div>
+  <footer>🔥 FIREFLY EDITION | consistent palette: forest decay & amber rust | all content inside divs | 2+ images per page</footer>
+</div>
+</body>
+</html>
