@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Last of Us | Outbreak Day</title>
   <style>
-    /* Global reset & color scheme (inspired by TLoU - earthy greens, rust, worn leather) */
+    
     * {
       margin: 0;
       padding: 0;
@@ -20,7 +20,7 @@
       color: #ece3d0;  /* aged parchment */
     }
 
-    /* main container with flexbox layout technique (advanced layout) */
+   
     .site-wrapper {
       max-width: 1300px;
       margin: 0 auto;
@@ -31,13 +31,12 @@
       flex-direction: column;
     }
 
-    /* Navigation Bar - custom colors, professional style */
     .nav-bar {
       background-color: #0e1912;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      border-bottom: 4px solid #b87c4a; /* rusty firefly accent */
+      border-bottom: 4px solid #b87c4a; 
       padding: 0.2rem 0;
     }
 
@@ -52,7 +51,7 @@
       border-bottom: 2px solid transparent;
     }
 
-    /* HOVER EFFECT for nav (separate from default hover, advanced) */
+ 
     .nav-bar a:hover {
       background-color: #315f47;
       border-bottom-color: #e2a356;
@@ -60,7 +59,7 @@
       transform: translateY(-2px);
     }
 
-    /* main content divs */
+
     .content-area {
       padding: 2rem 2.5rem;
       flex: 1;
@@ -87,7 +86,7 @@
       margin-bottom: 1.2rem;
     }
 
-    /* Image gallery using FLEXBOX layout technique */
+
     .flex-gallery {
       display: flex;
       flex-wrap: wrap;
@@ -105,7 +104,7 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    /* HOVER EFFECT: image card lift (advanced hover outside nav) */
+
     .img-card:hover {
       transform: scale(1.02) translateY(-6px);
       box-shadow: 0 12px 24px rgba(0,0,0,0.5);
@@ -125,7 +124,7 @@
       color: #c7b89a;
     }
 
-    /* "Learn Something New" from W3Schools How To - Image Overlay Effect */
+  
     .overlay-container {
       position: relative;
       width: 100%;
@@ -184,27 +183,31 @@
 </head>
 <body>
 <div class="site-wrapper">
-  <!-- navigation bar (all pages linked) -->
+
   <div class="nav-bar">
-    <a href="WrapUpHome.html">🏚️ OUTBREAK</a>
-    <a href="WrapUp2.html">📖 JOURNEY</a>
-    <a href="WrapUp3.html">👥 SURVIVORS</a>
-    <a href="WrapUpReferences.html">📚 REFERENCES</a>
+    <a href="WrapUpHome.html">OUTBREAK</a>
+    <a href="WrapUp2.html">JOURNEY</a>
+    <a href="WrapUp3.html">SURVIVORS</a>
+    <a href="WrapUpReferences.html">REFERENCES</a>
   </div>
 
   <div class="content-area">
     <h1>THE LAST OF US: A BROKEN WORLD</h1>
-    <p><strong>Why this game resonates with me — original reflection (150+ words):</strong> The Last of Us isn't just about zombies or fungus; it's about the fragile beauty of human connection. I remember the first time I witnessed Joel hold Ellie's hand after escaping the capitol building — no words, but everything was said. This game taught me that hope can exist even in damp, crumbling ruins. The chemistry between characters, the moral complexity, and the haunting soundtrack by Gustavo Santaolalla feel like a melancholic embrace. I love how every abandoned house tells a silent story: a child's drawing, a suicide note, a birthday banner. It makes you reflect on what you'd sacrifice for those you love. The world is harsh, but the moments of levity — Ellie's terrible puns, the giraffe scene — shine like fireflies in the dark. That's why I built this tribute: to honor Naughty Dog's masterpiece and share the emotional weight that lingers long after the credits roll.</p>
+    <p><strong>Why this is my favorite game:</strong> The Last of Us resonates with me because it's not just about fungus or monsters. It's about people and relationships. I remember a moment when Joel and Ellie connect, and it shows how trust and care can matter even when everything feels hopeless.
+
+I also like how the story makes you think about right and wrong. The soundtrack by Gustavo Santaolalla feels sad but comforting, and it matches the mood of the game. The best part is that the world feels real. In abandoned houses, you can find small signs of someone's life, like drawings or notes, and it makes you wonder what they went through.
+
+Even though the world is dark, there are also small funny moments, like Ellie's jokes and the giraffe scene, that bring light into the story. That's why I made this tribute: to honor the game and share the feelings that last after it's over.</p>
     
-    <!-- two pictures for homepage (media requirement) -->
+    
     <div class="flex-gallery">
       <div class="img-card">
-        <img src="https://image.api.playstation.com/vulcan/ap/rnd/202206/0220/7GwujF4E9syBIvX72wZbYVrK.jpg?w=440" alt="Joel and Ellie in overgrown Boston">
+        <img src="boston.png" alt="Joel and Ellie in overgrown Boston">
         <div class="img-caption">Joel & Ellie — The start of everything</div>
       </div>
       <div class="img-card">
         <div class="overlay-container">
-          <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2021/07/The-Last-of-Us-Giraffe-Scene.jpg" alt="Ellie watching giraffe">
+          <img src="Giraffe.png" alt="Ellie watching giraffe">
           <div class="overlay">
             <div class="overlay-text">The Giraffe Scene — A moment of hope</div>
           </div>
